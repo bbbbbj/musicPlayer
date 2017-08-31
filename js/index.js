@@ -1,6 +1,4 @@
 	
-
-
 var audio = document.getElementById('audio');//音频标签
 var playerBtn = document.getElementsByClassName('player-btn')[0];//播放界面按钮
 var playBorder = document.getElementsByClassName('border')[0];//旋转盒子
@@ -110,15 +108,6 @@ var musicData = [{
     		audio.play();
     	}
     }
-    function playBtn(){
-    	if(playBtnSpan[1].className.indexOf('pause')>=0){
-			playBtnSpan[1].className = 'play';
-			playBtnSpan[1].innerHTML = '<i class="iconfont" my="2">&#xe66a;</i>';
-		}else if(playBtnSpan[1].className.indexOf('play')>=0){
-			playBtnSpan[1].className = 'pause';
-			playBtnSpan[1].innerHTML = '<i class="iconfont" my="2">&#xe8d8;</i>';
-		}
-    }
     //按钮点击
     function playerBtnClick(e){
     	var playBtnI = playerBtn.getElementsByTagName('i');
@@ -151,7 +140,13 @@ var musicData = [{
     			player();
     			break;
     		case '2':
-		    	playBtn();
+		    	if(playBtnSpan[1].className.indexOf('pause')>=0){
+					playBtnSpan[1].className = 'play';
+					playBtnSpan[1].innerHTML = '<i class="iconfont" my="2">&#xe66a;</i>';
+				}else if(playBtnSpan[1].className.indexOf('play')>=0){
+					playBtnSpan[1].className = 'pause';
+					playBtnSpan[1].innerHTML = '<i class="iconfont" my="2">&#xe8d8;</i>';
+				}
 		    	player();
 		    	break;
     		case '3':
