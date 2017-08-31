@@ -11,51 +11,152 @@
    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
    <meta charset="UTF-8" />
    <title>网易云音乐</title>
-   <link rel="stylesheet" href="./css/font-awesome.min.css" />
-   <link rel="stylesheet" href="./css/main.css" />
+   <link rel="stylesheet" href="fonts/iconfont.css">
+   <link rel="stylesheet" href="css/reset.css">
+   <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+<div class="container">
    <div class="main">
-      <div class="headBox clearfix">
-         <div class="goBack"><i class="fa fa-arrow-left"></i></div>
+      <div class="box">
+         <div class="main-head">
+            <i class="iconfont">&#xe655;</i>
+            <span class="main-title">歌单</span>
+            <i class="iconfont">&#xe649;</i>
+            <i class="iconfont">&#xe60b;</i>
+         </div>
+         <div class="main-page">
+            <i class="iconfont">&#xe604;</i>
+            <span class="listen">2</span>
+         </div>
+            <span class="main-song">我松开时间的绳索</span>
+            <div class="user">
+               <img src="img/6.jpg" alt="" class="head-port">
+               <span class="name">爱上层楼</span>
+            </div>
+            <ul class="btn">
+               <li class="collect">
+                  <i class="iconfont">&#xe601;</i>
+                  <div>收藏</div>
+               </li>
+               <li class="comment">
+                  <i class="iconfont">&#xe608;</i>
+                  <div>评论</div>
+               </li>
+               <li class="share">
+                  <i class="iconfont">&#xe645;</i>
+                  <div>收藏</div>
+               </li>
+               <li class="download">
+                  <i class="iconfont">&#xe62d;</i>
+                  <div>下载</div>
+               </li>
+            </ul>
+      </div>
+      <ul class="song-list">
+         <li class="play-all">
+            <i class="iconfont">&#xe8d8;</i>
+            <span class="all-title">播放全部</span>
+            <span class="number">(共7首)</span>
+            <i class="iconfont icon-right">&#xe67d;</i>
+            <span class="select">多选</span>
+         </li>
+         <li class="songs">
+            <i class="iconfont">1</i>
+            <div class="songs-info">
+               <h3 class="info-name">致姗姗来迟的你</h3>
+               <h4 class="info-user">阿肆 林宥嘉</h4>
+            </div>
+            <i class="iconfont icon-right">&#xe649;</i>
+         </li>
+         <li class="songs">
+            <i class="iconfont">1</i>
+            <div class="songs-info">
+               <h3 class="info-name">爱你如衣</h3>
+               <h4 class="info-user">何沐阳</h4>
+            </div>
+            <i class="iconfont icon-right">&#xe649;</i>
+         </li>
+         <li class="songs">
+            <i class="iconfont">1</i>
+            <div class="songs-info">
+               <h3 class="info-name">若许一个愿望少活十年，我许十个</h3>
+               <h4 class="info-user">焦迈奇</h4>
+            </div>
+            <i class="iconfont icon-right">&#xe649;</i>
+         </li>
+         <li class="songs">
+            <i class="iconfont">1</i>
+            <div class="songs-info">
+               <h3 class="info-name">想你想疯了</h3>
+               <h4 class="info-user">许一鸣</h4>
+            </div>
+            <i class="iconfont icon-right">&#xe649;</i>
+         </li>
+         <li class="songs">
+            <i class="iconfont">1</i>
+            <div class="songs-info">
+               <h3 class="info-name">南国的孩子</h3>
+               <h4 class="info-user">张悬</h4>
+            </div>
+            <i class="iconfont icon-right">&#xe649;</i>
+         </li>
+         <li class="songs">
+            <i class="iconfont">1</i>
+            <div class="songs-info">
+               <h3 class="info-name">大鱼</h3>
+               <h4 class="info-user">周深</h4>
+            </div>
+            <i class="iconfont icon-right">&#xe649;</i>
+         </li>
+      </ul>
+      <div class="display">
+         <img src="img/4.jpg" alt="">
+         <span class="display-name">姗姗来迟的你</span>
+         <i class="iconfont">&#xe67d;</i>
+         <i class="iconfont">&#xe8d8;</i>
+      </div>
+   </div>
+   <div class="player">
+      <div class="head-box">
+         <i class="iconfont">&#xe655;</i>
          <div class="title">
-            <p class="songName" id="songName"></p>
-            <p class="singerName" id="singerName"></p>
+            <h3 class="song-name">致姗姗来迟的你</h3>
+            <h3 class="singer-name">林宥嘉，阿肆</h3>
          </div>
       </div>
-      <div class="discBox">
-         <div class="volume">
-            <div class="volumnbar" id="volumnbar">
-               <span class="arc"></span>
+      <div class="volume-box">
+      <i class="iconfont">&#xe62a;</i>
+         <span  class="volume">
+            <div class="volume-bar">
+               <span class="volume-ball"></span>
             </div>
-            <i class="fa fa-volume-up fa-1x"></i>
-         </div>
-         <div class="border"></div>
-         <div class="disc"></div>
+         </span>
       </div>
-      <div class="controllBox">
-         <div class="progressBox">
-            <div class="curTime">00:00</div>
-            <div class="progressBar">
-               <span class="arc"></span>
-            </div>
-            <div class="totalTime">05:30</div>
+      <div class="border">
+         <div class="circle"></div>
+      </div>
+      <div class="controller-box">
+         <div class="con-progress">
+            <span class="cur-time">00:00</span>
+            <span class="progress">
+               <span class="progress-bar">
+                  <span class="progress-ball"></span>
+               </span>
+            </span>
+            <span class="total-time">59:59</span>
          </div>
-         <div class="prev">
-            <i class="fa fa-step-backward" id="prevBtn"></i>
-         </div>
-         <div class="playBox">
-            <i class="fa fa-play-circle" id="playBtn"></i>
-            <!-- <i class="fa fa-pause-circle"></i> -->
-         </div>
-         <div class="next">
-            <i class="fa fa-step-forward" id="nextBtn"></i>
+         <div class="player-btn">
+            <span class="order"><i class="iconfont" my="0">&#xe648;</i></span>
+            <i class="iconfont" my="1">&#xe607;</i>
+            <span class="pause"><i class="iconfont" my="2">&#xe8d8;</i></span>
+            <i class="iconfont" my="3">&#xe62e;</i>
          </div>
       </div>
    </div>
-   <div class="blur"><!--高斯模糊背景--></div>
    <audio src="src/阿肆,林宥嘉 - 致姗姗来迟的你.mp3" id="audio">your browser didn't support this tag "audio"</audio>
-<script src="js/main.js" type="text/javascript"></script>
+</div>
+<script src="js/index.js"></script>
 </body>
 </html>
 
