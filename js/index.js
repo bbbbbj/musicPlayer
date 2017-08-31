@@ -4,21 +4,13 @@ var playerBtn = document.getElementsByClassName('player-btn')[0];//播放界面�
 var playBorder = document.getElementsByClassName('border')[0];//旋转盒子
 var playCircle = document.getElementsByClassName('circle')[0];//旋转封面
 var playBtnSpan = playerBtn.getElementsByTagName('span');//播放按钮盒子
-var progressBox = document.getElementsByClassName('progress')[0];//进度条
-var progressBar = document.getElementsByClassName('progress-bar')[0];
-var curTime = document.getElementsByClassName('cur-time')[0];//播放的时长
-var totalTime = document.getElementsByClassName('total-time')[0];//总时长
-var mainMusic = document.getElementsByClassName('main')[0];
-var playerMusic = document.getElementsByClassName('player')[0];
-var songName = document.getElementsByClassName('song-name')[0];
-var singerName = document.getElementsByClassName('singer-name')[0];
 var progressBall = document.getElementsByClassName('progress-ball')[0];//进度条标识
 var container = document.getElementsByClassName('container')[0];
-var isDrag = true,play=true;
-
-var volumeBox = document.getElementsByClassName('volume')[0];
-var volumeBar = document.getElementsByClassName('volume-bar')[0];
 var volumeBall = document.getElementsByClassName('volume-ball')[0];
+var curTime = document.getElementsByClassName('cur-time')[0];//播放的时长
+var progressBox = document.getElementsByClassName('progress')[0];//进度条
+var progressBar = document.getElementsByClassName('progress-bar')[0];
+var isDrag = true,play=true;
 
 //音频数据
 var musicData = [{
@@ -79,6 +71,11 @@ var musicData = [{
 	}
 	//时长改变
 	function changeSong(i){
+		var totalTime = document.getElementsByClassName('total-time')[0];//总时长
+		var mainMusic = document.getElementsByClassName('main')[0];
+		var playerMusic = document.getElementsByClassName('player')[0];
+		var songName = document.getElementsByClassName('song-name')[0];
+		var singerName = document.getElementsByClassName('singer-name')[0];
 		audio_m = Math.floor(audio.duration / 60);
 		audio_s = Math.round(audio.duration - audio_m * 60);
 		musicData[i].lm = audio_m < 10 ? '0' + audio_m : audio_m;
@@ -134,7 +131,7 @@ var musicData = [{
     			if(playBtnSpan[0].className.indexOf('order')>=0){
     				i==0?i=musicData.length-1:i--;
     			}else if(playBtnSpan[0].className.indexOf('rand')>=0){
-    				i=Math.round(Math.random()*musicData.length);
+    				i=Math.floor(Math.random()*musicData.length);
     			}
     			audio.src=musicData[i].src;
     			player();
@@ -156,6 +153,8 @@ var musicData = [{
     }
     //音量拖动
     function volumeBallDown(){
+    	var volumeBox = document.getElementsByClassName('volume')[0];
+		var volumeBar = document.getElementsByClassName('volume-bar')[0];
     	isDrag = true;
     	addEventHander(volumeBall,'mousemove',function(e){
     		e = e || window.event;
@@ -173,8 +172,8 @@ var musicData = [{
     	addEventHander(progressBall,'mousemove',function(e){
     		e = e || window.event;
     		if(isDrag){progressBar.style.width = e.clientX-progressBox.offsetLeft - container.offsetLeft +'px';}
-    		console.log(e.clientX);
-    		console.log(progressBox.offsetLeft+container.offsetLeft);
+    		//console.log(e.clientX);
+    		//console.log(progressBox.offsetLeft+container.offsetLeft);
     		var curr = progressBar.offsetWidth / progressBox.offsetWidth * audio.duration;
     		curM = Math.floor(curr / 60);
 	    	curS = Math.round(curr-curM * 60);
@@ -203,10 +202,10 @@ var musicData = [{
     //播放完成，进行下一首
     function musicEnded(){
     	if(playBtnSpan[0].className.indexOf('order')>=0){
-    		console.log(i)
+    		//console.log(i)
 			i==musicData.length-1?i=0:i++;
 		}else if(playBtnSpan[0].className.indexOf('rand')>=0){
-			i=Math.round(Math.random()*musicData.length);
+			i=Math.floor(Math.random()*musicData.length);
 		}
 		audio.src=musicData[i].src;
 		player();
@@ -251,8 +250,4 @@ var musicData = [{
 	addEventHander(audio,'timeupdate',proUpdate);
 	addEventHander(audio,'ended',musicEnded);
 	addEventHander(progressBall,'mousedown',proBallDown);
-	addEventHander(volumeBall,'mousedown',volumeBallDown);
-
-
-
-	
+	addEventHander(volumeBall,'mousedown',volumeBallDown);	
