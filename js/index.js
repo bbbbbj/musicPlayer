@@ -251,3 +251,4 @@ var musicData = [{
 	addEventHander(audio,'ended',musicEnded);
 	addEventHander(progressBall,'mousedown',proBallDown);
 	addEventHander(volumeBall,'mousedown',volumeBallDown);	
+	
