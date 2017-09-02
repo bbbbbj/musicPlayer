@@ -121,6 +121,13 @@ html,body{
 	-webkit-animation:move_rotate linear 3.6s infinite;
 	animation:move_rotate linear 3.6s infinite;
 }
+.lyric{
+	width: 240px;
+	height: 240px;
+	margin: 0 auto;
+	text-align: center;
+	color: #666;
+}
 .controller-box{
 	width: 100%;
 	height: 60px;
@@ -174,150 +181,6 @@ html,body{
 	margin-left: 30px;
 }
 
-.box{
-	width: 100%;
-	height: 40%;
-	background: rgba(225,225,225,.5);
-}
-.main-head{
-	width: 100%;
-	height: 50px;
-	line-height: 45px;
-}
-.main-head i{
-	line-height: 50px;
-	float: right;
-	margin-left: 10px;
-	padding-right: 10px;
-	font-size: 24px;
-}
-.main-head i:first-child{
-	float: left;
-	font-size: 28px;
-}
-.main-page{
-	width: 120px;
-	height: 120px;
-	margin: 0 20px;
-	background: url(../img/4.jpg);
-	position: relative;
-	float: left;
-}
-.main-page i{
-	font-size: 8px;
-	color: #fff;
-	position: absolute;
-	right: 15px;
-	top: 5px;
-}
-.main-page .listen{
-	font-size: 8px;
-	color: #fff;
-	position: absolute;
-	right: 5px;
-	top: 5px;
-}
-.main-song{
-	color: #fff;
-	line-height: 60px;
-	margin-bottom: 10px;
-}
-.head-port{
-	width: 20px;
-	height: 20px;
-	border-radius: 10px;
-	float: left;
-}
-.name{
-	display: inline-block;
-	font-size: 12px;
-	line-height: 20px;
-	color: #fff;
-	margin-left: 10px;
-}
-ul.btn{
-	width: 90%;
-	height: 80px;
-	margin: 0 auto;
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-around;
-	align-items: center;
-}
-.btn li .iconfont{
-	color: #fff;
-}
-/*歌曲列表*/
-.song-list{
-	width: 100%;
-	box-sizing: border-box;
-	max-height: 50%;
-	overflow: auto;
-}
-.song-list li.play-all{
-	width: 100%;
-	height: 40px;
-	border-bottom: 1px solid #fff;
-	line-height: 40px;
-}
-.songs{
-	width: 100%;
-	height: 45px;
-	border-bottom: 1px solid #fff;
-	line-height: 45px;
-}
-.play-all .iconfont{
-	font-size: 16px;
-	padding-left: 10px;
-	padding-right: 10px;
-}
-.number{
-	font-size: 12px;
-}
-.select,.icon-right{
-	font-size: 12px;
-	float: right !important;
-}
-.songs .iconfont{
-	font-size: 16px;
-	float: left;
-	padding-left: 10px;
-	padding-right:10px;
-}
-.songs-info{
-	float: left;
-}
-.info-name{
-	font-size: 16px;
-	line-height: 25px;
-	font-weight: 500;
-}
-.info-user{
-	font-size: 12px;
-	line-height: 20px;
-}
-.display{
-	width: 100%;
-	height: 63px;
-	background: rgba(225,225,225,.9);
-}
-.display img{
-	width: 51px;
-	height: 51px;
-	padding: 6px;
-	float: left;
-}
-.display-name{
-	line-height: 63px;
-	font-size: 20px;
-	float: left;
-}
-.display .iconfont{
-	float: right;
-	margin-right: 10px;
-	margin-left: 10px;
-	line-height: 63px;
-}
 @-webkit-keyframes move_rotate{
    0%{
    -webkit-transform:rotate(0deg);

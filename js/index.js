@@ -72,7 +72,6 @@ var musicData = [{
 	//时长改变
 	function changeSong(i){
 		var totalTime = document.getElementsByClassName('total-time')[0];//总时长
-		var mainMusic = document.getElementsByClassName('main')[0];
 		var playerMusic = document.getElementsByClassName('player')[0];
 		var songName = document.getElementsByClassName('song-name')[0];
 		var singerName = document.getElementsByClassName('singer-name')[0];
@@ -84,7 +83,6 @@ var musicData = [{
 		curTime.innerHTML = '00:00';
 		totalTime.innerHTML = musicData[i].lm + ':' + musicData[i].ls;
 		playCircle.style.backgroundImage = 'url(' + musicData[i].bg + ')';
-		mainMusic.style.backgroundImage = 'url(' + musicData[i].bg + ')';
 		playerMusic.style.backgroundImage = 'url(' + musicData[i].bg + ')';
 		songName.innerHTML = musicData[i].songName;
 		singerName.innerHTML = musicData[i].singerName;
@@ -251,4 +249,3 @@ var musicData = [{
 	addEventHander(audio,'ended',musicEnded);
 	addEventHander(progressBall,'mousedown',proBallDown);
 	addEventHander(volumeBall,'mousedown',volumeBallDown);	
-	
