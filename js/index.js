@@ -88,21 +88,7 @@ var musicData = [{
 		singerName.innerHTML = musicData[i].singerName;
 	}
     //播放主程序
-    function player(){
-    	if(playBtnSpan[1].className.indexOf('pause')>=0){
-    		playBorder.style.webkitAnimationPlayState = 'paused';
-    		playBorder.style.animationPlayState = 'paused';
-    		playCircle.style.webkitAnimationPlayState = 'paused';
-    		playCircle.style.animationPlayState = 'paused';
-    		audio.pause();
-    	}else if(playBtnSpan[1].className.indexOf('play')>=0){
-    		playBorder.style.webkitAnimationPlayState = 'running';
-    		playBorder.style.animationPlayState = 'running';
-    		playCircle.style.webkitAnimationPlayState = 'running';
-    		playCircle.style.animationPlayState = 'running';
-    		audio.play();
-    	}
-    }
+    
     //按钮点击
     function playerBtnClick(e){
     	var playBtnI = playerBtn.getElementsByTagName('i');
