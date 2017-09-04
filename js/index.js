@@ -19,7 +19,7 @@ var musicData = [{
 		'src':'src/阿肆,林宥嘉 - 致姗姗来迟的你.mp3',
 		'bg':'./img/6.jpg',
 		'songName':'致姗姗来迟的你',
-		'singerName':'阿肆 林'
+		'singerName':'阿肆 林宥嘉'
 	},{
 		'lm':99,
 		'ls':59,
