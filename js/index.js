@@ -12,7 +12,7 @@ var progressBox = document.getElementsByClassName('progress')[0];//进度条
 var progressBar = document.getElementsByClassName('progress-bar')[0];
 var isDrag = true,play=true;
 
-//音频数据
+//音频数据数组
 var musicData = [{
 		'lm':99,
 		'ls':59,
